@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.controller.repository.CompanyRepo;
 import com.example.demo.entity.Company;
+import com.example.demo.repository.CompanyRepo;
 
 @RestController
 public class CrudOperationController {
@@ -36,5 +36,6 @@ public class CrudOperationController {
 	@DeleteMapping(value="/delete")
 	public void delete(@RequestParam int id) {
 		companyRepo.deleteData(id);
+		
 	}
 }

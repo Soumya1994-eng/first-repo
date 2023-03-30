@@ -1,10 +1,14 @@
 package com.example.demo.entity;
 
 
-import org.springframework.data.annotation.Id;
+
+
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;  
+
 
 
 
@@ -14,6 +18,7 @@ public class Company {
 	
 	@Id
 	private int id;
+	
 	public int getId() {
 		return id;
 	}
@@ -40,6 +45,7 @@ public class Company {
 	}
 	private String name;
 	private int age;
+	
 	private String address;
 
 }
